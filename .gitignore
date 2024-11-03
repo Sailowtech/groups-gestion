@@ -1,0 +1,6 @@
+# VSCode settings
+settings.json
+
+# CSV files, we don't want them in the repo as they contain sensitive data
+*.csv
+
