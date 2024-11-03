@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A simple script to easily create google groups by making the difference between two csv files.">
+    <meta name="author" content="Arthur Jacobs <arthur.jacobs@sailowtech.ch>, Cursor <hi@cursor.com">
+    <title>Email List Difference</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Email List Difference</h1>
+        <p>Yes this is ugly but I did not have time to make it prettier. Feel free to open a PR ;)</p>
+        <br>
+        <p>Input should be two csv files with the following columns (order matters!):</p>
+        <p>Member Name,Member Email,Member Relation Type,Member Type</p>
+        <br>
+        <p>Output will be a csv file with the following columns:</p>
+        <p>Group Email [required],Member Email</p>
+        <br>
+        <input type="file" id="file1" accept=".csv" title="Fichier 1">
+        -
+        <input type="file" id="file2" accept=".csv">
+        <input type="email" id="emailInput" pattern=".+@sailowtech\.ch" placeholder="newgroup_mail@sailowtech.ch"
+            required style="width: 300px;">
+        <button onclick="computeDifference()">Compute Difference</button>
+        <button onclick="downloadOutput()">Download Output</button>
+        <pre id="output"></pre>
+    </div>
+    <script src="src/script.js"></script>
+</body>
+
+</html>
