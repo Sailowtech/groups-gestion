@@ -1,5 +1,5 @@
 ## TL;DR
-Goto [https://sailowtech.github.io/google-groups-difference/](https://sailowtech.github.io/google-groups-difference/)
+Goto [https://sailowtech.github.io/groups-gestion/](https://sailowtech.github.io/groups-gestion/)
 
 ## Project description
 
